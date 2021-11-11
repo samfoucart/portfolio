@@ -41,7 +41,7 @@ export default class BlogPost extends React.Component<{filename: string}, BlogPo
                     </div>
                 </div>
                 
-        )
+        );
     }
 }
 
