@@ -25,18 +25,6 @@ export default class BlogPost extends React.Component<{filename: string}, BlogPo
     }
 
     render() {
-        // return (
-        // typeof(postText) === undefined?
-        //     <div dangerouslySetInnerHTML={{__html: "test.html"}}>
-
-        //     </div>
-        // :
-        //     <div>
-        //         <p>
-        //             Post Not Found
-        //         </p>
-        //     </div>
-        // );
         return (
             typeof(this.state.post) === undefined?
                 <div>
