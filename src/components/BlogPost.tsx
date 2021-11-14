@@ -1,26 +1,21 @@
 import React from "react";
 
-
 interface BlogPostState {
     loading: boolean;
     failed: boolean;
-    post: string | undefined;
+    post: string;
 }
 
 export default class BlogPost extends React.Component<{filename: string}, BlogPostState> {
 
     constructor(filename: string) {
         super({filename});
-        this.state = {loading: true, failed: false, post: undefined};
+        this.state = {loading: true, failed: false, post: ""};
     }
     
     async componentDidMount() {
-        let postText: string | undefined = await fetchBlogPost();
-        if (typeof(postText) === undefined) {
-            this.setState({loading: false, failed: true, post: postText});
-        } else {
-            this.setState({loading: false, failed: false, post: postText});
-        }
+        let postText: string | undefined = await this.fetchBlogPost();
+        this.setState({loading: false, failed: false, post: postText ?? ''});
         console.log(postText);
     }
 
@@ -36,16 +31,21 @@ export default class BlogPost extends React.Component<{filename: string}, BlogPo
                         {this.state.loading? "still loading": "done loading"}
                     </p>
                     <div>
+                        {/* It is safe to dangerouslySetInnerHTML here because the state
+                         can only be defined by a file in the self-maintained json in the repo
+                         Users cannot upload their own posts. I am the only one able to add posts to the git repo.
+                         Otherwise, this would be vulnerable to an injection attack */}
                         <div dangerouslySetInnerHTML={{__html: this.state.post === undefined? "": this.state.post}}>
                         </div>
                     </div>
                 </div>
-                
         );
+    }
+
+    async fetchBlogPost(): Promise<string | undefined> {
+        let response: Response = await fetch(`/posts/${this.props.filename}`);
+        return await response.text();
     }
 }
 
-async function fetchBlogPost(): Promise<string | undefined> {
-    let response: Response = await fetch('/posts/test.html');
-    return await response.text();
-}
+
