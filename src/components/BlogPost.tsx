@@ -6,9 +6,9 @@ interface BlogPostState {
     post: string;
 }
 
-export default class BlogPost extends React.Component<{filename: string}, BlogPostState> {
+export default class BlogPost extends React.Component<{filename?: string}, BlogPostState> {
 
-    constructor(filename: string) {
+    constructor(filename?: string) {
         super({filename});
         this.state = {loading: true, failed: false, post: ""};
     }
@@ -43,7 +43,7 @@ export default class BlogPost extends React.Component<{filename: string}, BlogPo
     }
 
     async fetchBlogPost(): Promise<string | undefined> {
-        let response: Response = await fetch(`/posts/${this.props.filename}`);
+        let response: Response = await fetch(`/posts/${"creating-portfolio-website-raw.html"}`);
         return await response.text();
     }
 }
