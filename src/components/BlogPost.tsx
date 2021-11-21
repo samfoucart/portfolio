@@ -43,7 +43,7 @@ export default class BlogPost extends React.Component<{filename?: string}, BlogP
     }
 
     async fetchBlogPost(): Promise<string | undefined> {
-        let response: Response = await fetch(`/posts/${"creating-portfolio-website-raw.html"}`);
+        let response: Response = await fetch(`/posts-raw/${"creating-portfolio-website-raw.html"}`);
         return await response.text();
     }
 }

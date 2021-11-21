@@ -14,7 +14,7 @@ function App() {
         {/* <BlogPost filename={"creating-portfolio-website-raw.html"}/> */}
       </div>
       </Layout>
-      <Outlet/>
+      {/* <Outlet/> */}
     </div> 
   );
 }
