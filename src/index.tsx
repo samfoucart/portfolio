@@ -1,20 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import BlogPost from './components/BlogPost';
 import reportWebVitals from './reportWebVitals';
+import PageRouter from './components/PageRouter';
 
 ReactDOM.render(
-  <HashRouter>
-    <Routes>
-      <Route path="/" element={<App />}>
-        
-      </Route>
-      <Route path="posts" element={<BlogPost />} />
-    </Routes>
-  </HashRouter>
+  <PageRouter/>
   ,
   document.getElementById('root')
 );
