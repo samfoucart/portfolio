@@ -15,8 +15,8 @@ export default function BlogPosts() {
     const location = useLocation();
 
     useEffect(() => {
-        // const blogPostListResponse = fetch(process.env.PUBLIC_URL + '/posts-raw/posts.json');
-        const blogPostListResponse = fetch('/posts-raw/posts.json');
+        const blogPostListResponse = fetch(process.env.PUBLIC_URL + '/posts-raw/posts.json');
+        // const blogPostListResponse = fetch('/posts-raw/posts.json');
         blogPostListResponse.then((response: Response) => {
             return response.json();
         })
