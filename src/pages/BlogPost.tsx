@@ -12,7 +12,8 @@ export default function BlogPost() {
     const params = useParams();
 
     useEffect(() => {
-        const postResponse = fetch(process.env.PUBLIC_URL + `/posts-raw/${params.postId}.md`);
+        // const postResponse = fetch(process.env.PUBLIC_URL + `/posts-raw/${params.postId}.md`);
+        const postResponse = fetch(`/posts-raw/${params.postId}.md`);
         postResponse.then((response) => {
             return response.text();
         })
