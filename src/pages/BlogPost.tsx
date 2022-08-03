@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 
-// interface BlogPostState {
-//     loading: boolean;
-//     failed: boolean;
-//     post: string;
-// }
+interface BlogPostState {
+    loading: boolean;
+    failed: boolean;
+    post: string;
+}
 
 export default function BlogPost() {
-    const [blogPost, setBlogPost] = useState<string | null>(null);
+    const [blogPost, setBlogPost] = useState<BlogPostState>({loading: true, failed: false, post: ""});
     const params = useParams();
 
     useEffect(() => {
@@ -18,13 +20,27 @@ export default function BlogPost() {
             return response.text();
         })
         .then((data) => {
-            setBlogPost(data);
+            const sanitizedPostHtml: string = DOMPurify.sanitize(marked.parse(data));
+            setBlogPost({loading: false, failed: false, post: sanitizedPostHtml});
+        })
+        .catch((error) => {
+            console.log(error);
+            setBlogPost({loading: false, failed: true, post: ""});
         });
     }, [params]);
 
     return (
         <div>
-            {blogPost != null ? <p>{blogPost}</p> : <p>loading</p>}
+            {
+            blogPost.loading === false && blogPost.failed === false ?
+            <div 
+            dangerouslySetInnerHTML={{ __html: blogPost.post}}
+            style={{overflowWrap: 'break-word'}}/>
+            :
+            <div>
+            </div>
+            }
+            {/* {blogPost != null ? <p>{blogPost}</p> : <p>loading</p>} */}
         </div>
     )
 }
