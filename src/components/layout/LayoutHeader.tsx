@@ -7,8 +7,8 @@ export default function LayoutHeader() {
             <nav className="top-nav">
                 <Link to={"/"}>Home</Link>
                 <Link to={"/posts"}>Blog</Link>
-                <Link to={"/"}>About</Link>
-                <Link to={"/"}>Contact</Link>
+                <Link to={"/projects"}>Projects</Link>
+                <Link to={"/contact"}>Contact</Link>
             </nav>
             <div className="top-nav-spacer"/>
         </div>

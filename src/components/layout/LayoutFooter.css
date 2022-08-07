@@ -1,0 +1,15 @@
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F6F6F6;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-spacer {
+    margin-top: 75px;
+}

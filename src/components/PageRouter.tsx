@@ -1,8 +1,10 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import App from "../App";
 import Home from "../pages/Home";
-import BlogPost from "../pages/BlogPost";
-import BlogPosts from "../pages/BlogPosts";
+import BlogPost from "../pages/BlogPost/BlogPost";
+import BlogPosts from "../pages/BlogPost/BlogPosts";
+import Projects from "../pages/Projects";
+import Contact from "../pages/Contact";
 
 export default function PageRouter() {
     return (
@@ -13,6 +15,8 @@ export default function PageRouter() {
                         <Route index element={<Home />} />
                         <Route path="posts" element={<BlogPosts />} />
                         <Route path="posts/:postId" element={<BlogPost />} />
+                        <Route path="projects" element={<Projects />} />
+                        <Route path="contact" element={<Contact />} />
                     </Route>
                 </Routes>
             </HashRouter>

@@ -1,0 +1,35 @@
+.post-list-container {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.individual-post-metadata{
+    display: flex;
+    flex-direction: column;
+}
+
+.individual-post-metadata a {
+    text-decoration: none;
+    color:black;
+}
+
+.individual-post-metadata a:hover {
+    text-decoration: none;
+    color:black;
+    background-color: #F6F6F6;
+}
+
+.individual-post-metadata a:active {
+    text-decoration: none;
+    color:black;
+    background-color: #F3F3F3;
+}
+
+.individual-post-metadata-inline {
+    display: flex;
+    flex-direction: row;
+}
+
+.individual-post-metadata-inline > * {
+    padding-right: 5%;
+}
