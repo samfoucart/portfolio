@@ -2,3 +2,7 @@
     padding-left: 3%;
     padding-right: 3%;
 }
+
+.post-container p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
