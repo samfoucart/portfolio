@@ -64,7 +64,7 @@ export default function BlogPosts() {
     }
 
     return (
-        <div className="post-list-container">
+        <div>
             {formatBlogPosts(blogPosts)}
             {/* <ul>
                 {blogPosts != null ? blogPosts.map((blogPost: IBlogPostMetadata) => {
