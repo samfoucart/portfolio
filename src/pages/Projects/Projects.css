@@ -1,0 +1,40 @@
+.project-list-container {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.project-metadata {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-metadata a {
+    text-decoration: none;
+    color:black;
+}
+
+.project-metadata a:hover {
+    text-decoration: none;
+    color:black;
+    background-color: #F6F6F6;
+}
+
+.project-metadata a:active {
+    text-decoration: none;
+    color:black;
+    background-color: #F3F3F3;
+}
+
+.project-outline {
+    display: flex;
+    flex-direction: row;
+}
+
+.project-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-text > * {
+    padding-left: 5%;
+}

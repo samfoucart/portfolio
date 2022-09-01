@@ -3,7 +3,7 @@ import App from "../App";
 import Home from "../pages/Home";
 import BlogPost from "../pages/BlogPost/BlogPost";
 import BlogPosts from "../pages/BlogPost/BlogPosts";
-import Projects from "../pages/Projects";
+import Projects from "../pages/Projects/Projects";
 import Contact from "../pages/Contact";
 
 export default function PageRouter() {

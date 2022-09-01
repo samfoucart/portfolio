@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './BlogPosts.css';
 
@@ -37,8 +37,8 @@ export default function BlogPosts() {
     function formatBlogPosts(unformattedPosts: IBlogPostMetadata[] | null) {
         if (unformattedPosts == null) {
             return (
-                <div className="post-list-container"><p>Loading</p></div>
-            )
+                <div className="post-list-container"><p>Loading...</p></div>
+            );
         } else {
             return (
                 <div className="post-list-container">
@@ -73,5 +73,5 @@ export default function BlogPosts() {
             </ul> */}
             {/* <Outlet/> */}
         </div>
-    )
+    );
 }
