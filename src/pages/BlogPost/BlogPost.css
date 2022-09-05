@@ -3,6 +3,32 @@
     padding-right: 3%;
 }
 
-.post-container p {
+/* .post-container p {
     font-family: Georgia, 'Times New Roman', Times, serif;
+} */
+
+.hljs-keyword {
+    color: red;
 }
+
+.hljs-comment {
+    color: green;
+}
+
+.hljs-built_in {
+    color: blue;
+}
+
+.hljs-type {
+    color: blue;
+}
+
+.hljs-number {
+    color:blue;
+}
+
+.hljs-literal {
+    color: blue;
+}
+
+

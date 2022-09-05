@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { marked } from 'marked';
 import DOMPurify from 'dompurify';
 import './BlogPost.css';
+import hljs from "highlight.js";
 
 interface BlogPostState {
     loading: boolean;
@@ -15,6 +16,13 @@ export default function BlogPost() {
     const params = useParams();
 
     useEffect(() => {
+        marked.setOptions({
+            highlight: (code, lang) => {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
+            },
+            langPrefix: 'hljs language-',
+        });
         const postResponse = fetch(process.env.PUBLIC_URL + `/posts-raw/${params.postId}.md`);
         // const postResponse = fetch(`/posts-raw/${params.postId}.md`);
         postResponse.then((response) => {
