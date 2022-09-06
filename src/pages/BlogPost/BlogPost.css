@@ -31,4 +31,8 @@
     color: blue;
 }
 
+.post-container pre {
+    overflow-x: scroll;
+}
+
 
