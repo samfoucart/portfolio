@@ -3,12 +3,14 @@
     padding-right: 3%;
 }
 
-.individual-post-metadata{
+.individual-post-metadata {
     display: flex;
     flex-direction: column;
 }
 
 .individual-post-metadata a {
+    padding-left: 3%;
+    padding-right: 3%;
     text-decoration: none;
     color:black;
 }

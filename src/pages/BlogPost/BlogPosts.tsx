@@ -41,22 +41,25 @@ export default function BlogPosts() {
             );
         } else {
             return (
-                <div className="post-list-container">
-                    <div className="individual-post-metadata">
-                        {unformattedPosts.map((post: IBlogPostMetadata) => {
-                            return (
-                                <Link to={`/posts/${post.id}`} key={post.id}>
-                                    <h2>{post.title}</h2>
-                                    <div className="individual-post-metadata-inline">
-                                        <p>Author: <i>{post.author}</i></p>
-                                        <p>Date Created: <i>{post.date_created}</i></p>
-                                        <p>Date Last Updated: <i>{post.date_last_updated}</i></p>
-                                    </div>
-                                </Link>
-                            );
-                        })}
+                <div>
+                    <div className="post-list-container">
+                        <div className="individual-post-metadata">
+                            {unformattedPosts.map((post: IBlogPostMetadata) => {
+                                return (
+                                    <Link to={`/posts/${post.id}`} key={post.id}>
+                                        <h2>{post.title}</h2>
+                                        <div className="individual-post-metadata-inline">
+                                            <p>Author: <i>{post.author}</i></p>
+                                            <p>Date Created: <i>{post.date_created}</i></p>
+                                            <p>Date Last Updated: <i>{post.date_last_updated}</i></p>
+                                        </div>
+                                    </Link>
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
+                
             )
             
         }

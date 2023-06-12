@@ -1,0 +1,26 @@
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 3%;
+    padding-right: 3%;
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+}
+
+.contact-row {
+    padding-right: 3%;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1%;
+}
+
+.contact-row > * {
+    padding-right: 5%;
+}
+
+@media screen and (max-width: 1024px) {
+    .contact-row {
+        flex-direction: column;
+    }
+}
