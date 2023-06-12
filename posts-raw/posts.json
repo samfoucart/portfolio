@@ -35,7 +35,23 @@
         "id": 5,
         "title": "Studying the Blind 75",
         "date_created": "9/4/2022",
-        "date_last_updated": "9/6/2022",
+        "date_last_updated": "9/9/2022",
+        "author": "Sam Foucart",
+        "filename": ""
+    },
+    {
+        "id": 6,
+        "title": "Hosting a React App on GitHub Pages",
+        "date_created": "6/12/2023",
+        "date_last_updated": "6/12/2023",
+        "author": "Sam Foucart",
+        "filename": ""
+    },
+    {
+        "id": 7,
+        "title": "Unit Testing aws-sdk V2 Library in Typescript",
+        "date_created": "6/12/2023",
+        "date_last_updated": "6/12/2023",
         "author": "Sam Foucart",
         "filename": ""
     }
