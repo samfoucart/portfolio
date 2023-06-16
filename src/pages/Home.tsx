@@ -16,7 +16,11 @@ export default function Home() {
                     </p>
                 </div>
             </div>
-            <img src={process.env.PUBLIC_URL + '/images/home/IMG_5120.jpeg'} style={{objectFit: 'scale-down', flexShrink: 1, width: '100%', height: '100%'}}/>
+            <img src={process.env.PUBLIC_URL + '/images/home/mesaltshed.jpeg'} style={{objectFit: 'scale-down', flexShrink: 1, width: '100%', height: '100%'}}/>
+            <img src={process.env.PUBLIC_URL + '/images/home/meandclaire.jpeg'} style={{objectFit: 'scale-down', flexShrink: 1, width: '100%', height: '100%'}}/>
+            <img src={process.env.PUBLIC_URL + '/images/home/databendpicture.JPG'} style={{objectFit: 'scale-down', flexShrink: 1, width: '100%', height: '100%'}}/>
+            <img src={process.env.PUBLIC_URL + '/images/home/treepicture.jpeg'} style={{objectFit: 'scale-down', flexShrink: 1, width: '100%', height: '100%'}}/>
+            <img src={process.env.PUBLIC_URL + '/images/home/foggypicture.jpeg'} style={{objectFit: 'scale-down', flexShrink: 1, width: '100%', height: '100%'}}/>
         </div>
     );
 }
