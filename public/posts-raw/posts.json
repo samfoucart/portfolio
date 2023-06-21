@@ -1,7 +1,15 @@
 [
     {
         "id": 1,
-        "title": "Creating My Portfolio Website",
+        "title": "Creating a Portfolio Website to Learn React",
+        "date_created": "11/10/2021",
+        "date_last_updated": "11/11/2021",
+        "author": "Sam Foucart",
+        "filename": "creating-portfolio-website-raw.html"
+    },
+    {
+        "id": 3,
+        "title": "Markdown Test",
         "date_created": "11/10/2021",
         "date_last_updated": "11/11/2021",
         "author": "Sam Foucart",
@@ -9,7 +17,7 @@
     },
     {
         "id": 4,
-        "title": "Compiling and Debugging FFmpeg for Windows",
+        "title": "Compiling and Debugging FFmpeg for Windows UNDER CONSTRUCTION",
         "date_created": "8/5/2022",
         "date_last_updated": "8/5/2022",
         "author": "Sam Foucart",
@@ -26,14 +34,6 @@
     {
         "id": 6,
         "title": "Hosting a React App on GitHub Pages",
-        "date_created": "6/12/2023",
-        "date_last_updated": "6/12/2023",
-        "author": "Sam Foucart",
-        "filename": ""
-    },
-    {
-        "id": 7,
-        "title": "Unit Testing aws-sdk V2 Library in Typescript",
         "date_created": "6/12/2023",
         "date_last_updated": "6/12/2023",
         "author": "Sam Foucart",

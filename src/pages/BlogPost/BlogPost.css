@@ -35,4 +35,14 @@
     overflow-x: scroll;
 }
 
+.post-container img {
+    width: 100%;
+    overflow: scroll;
+}
 
+@media screen and (max-width: 1024px) {
+    .post-container img {
+        width: 95vw;
+        overflow: scroll;
+    }
+}
